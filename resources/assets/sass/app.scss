@@ -28,3 +28,28 @@ footer{
   font-size:1rem;
 
 }
+//register
+#register-page{
+  img.captcha{
+    cursor : pointer;
+
+  }
+}
+//users.show
+#users-show-page{
+  .users-show-title{
+    font-size: 2rem;
+    span{
+      font-size : 1.5rem;
+    }
+  }
+}
+//users.edit
+#users-edit-page{
+   label{
+     font-size: 1.2rem;
+   }
+  button{
+    font-weight: bold;
+  }
+}
