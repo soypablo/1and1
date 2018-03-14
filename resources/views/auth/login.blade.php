@@ -5,13 +5,13 @@
     <div class="row justify-content-md-center mt-5">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Login</div>
+                <div class="card-header">登陆</div>
                 <div class="card-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group row">
-                            <label for="email" class="col-lg-4 col-form-label text-lg-right">E-Mail Address</label>
+                            <label for="email" class="col-lg-4 col-form-label text-lg-right">邮箱地址</label>
 
                             <div class="col-lg-6">
                                 <input
@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-lg-4 col-form-label text-lg-right">Password</label>
+                            <label for="password" class="col-lg-4 col-form-label text-lg-right">密码</label>
 
                             <div class="col-lg-6">
                                 <input
@@ -65,7 +65,7 @@
                         <div class="form-group row">
                             <div class="col-lg-8 offset-lg-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    登陆
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
