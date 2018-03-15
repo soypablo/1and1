@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Handlers\ImageUploadHandler;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use function back;
 use function compact;
+use function config;
+use function dd;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use function public_path;
 use function redirect;
+use function str_random;
+use function time;
 use function view;
 
 class UsersController extends Controller
@@ -25,10 +32,17 @@ class UsersController extends Controller
     }
     
     //保存编辑过的个人资料
-    public function update(UserRequest $request, User $user)
+    public function update(UserRequest $request,ImageUploadHandler $imageUploadHandler ,User $user)
     {
-        $user->update($request->all());
-        return back()->with('success','个人资料已经更新成功!');
+        Storage::disk('local')->put('avatar/2018/1', $request->avatar);
 
+    }
+
+    public function test()
+    {
+        $array = ['name'=>'xiang','age'=>35,'avatar'=>'123'];
+        $array2=['path'=>'/a/b'];
+        $array['avatar']=$array2['path'];
+        dd($array);
     }
 }

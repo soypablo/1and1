@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-md-3">
             <div class="card">
-                <img class="img-thumbnail card-img-top"  src="{{$user->gravatar(200)}}" alt="图像">
+                <img class="img-thumbnail card-img-top"  src="#" alt="图像">
                 <div class="card-body">
                     <h4 class="card-title">个人简介</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi debitis deserunt dolore hic ipsa laudantium minus, nemo numquam odio, optio, possimus quaerat quisquam sed sequi sint soluta totam voluptatibus.</p>
+                    <p class="card-text">{{$user->introduction}}</p>
                     <hr>
                     <h4 class="card-title">注册于</h4>
-                    <p class="card-text">2018年1月1日</p>
+                    <p class="card-text">{{$user->created_at->diffForHumans()}}</p>
                 </div>
             </div>
         </div>
