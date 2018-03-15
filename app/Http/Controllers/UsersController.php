@@ -34,7 +34,7 @@ class UsersController extends Controller
     //保存编辑过的个人资料
     public function update(UserRequest $request,ImageUploadHandler $imageUploadHandler ,User $user)
     {
-        Storage::disk('local')->put('avatar/2018/1', $request->avatar);
+        $user->uploadFile($request->avatar, $user->id);
 
     }
 
