@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfe88c9935fc998c337c56f46b3304ec",
+    "content-hash": "a908044ef41e7b9da2d20a2ee11bcad3",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -2893,7 +2893,7 @@
             ],
             "authors": [
                 {
-                    "name": "Francois Zaninotto"
+                    "name": "François Zaninotto"
                 }
             ],
             "description": "Faker is a PHP library that generates fake data for you.",

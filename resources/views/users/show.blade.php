@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="card">
-                <img class="img-thumbnail card-img-top"  src="#" alt="图像">
+                <img class="img-thumbnail card-img-top"  src="{{Storage::url($user->avatar)}}" alt="图像">
                 <div class="card-body">
                     <h4 class="card-title">个人简介</h4>
                     <p class="card-text">{{$user->introduction}}</p>
