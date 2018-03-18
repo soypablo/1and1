@@ -17,7 +17,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            <img class="rounded-circle img-thumbnail" src="{{Storage::url(Auth::user()->avatar)}}" alt="" width="30px">
+                            <img class="rounded-circle img-thumbnail" src="{{Auth::user()->avatar}}" alt="" width="30px">
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">

@@ -17,10 +17,10 @@
 <body>
 <div id="{{route_name()}}-page">
     @include('layouts._header')
-    <div class="container">
+
         @include('common._message')
         @yield('content')
-    </div>
+
     @include('layouts._footer')
 </div>
 

@@ -10038,3 +10038,7 @@ footer {
   font-weight: bold;
 }
 
+#topics-index-page .card-body img {
+  width: 6rem;
+}
+
