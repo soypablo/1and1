@@ -23,9 +23,9 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|between:3,25|regex:/^[0-9a-zA-Z\_]+$/|unique:users,name,'.Auth::id(),
-
+            'name'         => 'required|between:3,25|regex:/^[0-9a-zA-Z\_]+$/|unique:users,name,'.Auth::id(),
             'introduction' => 'required|max:80',
+            'avatar'=>'mimes:jpeg,bmp,png,gif|dimensions:min_width=200,min_height=200',
 
         ];
     }
@@ -35,7 +35,8 @@ class UserRequest extends FormRequest
         return [
             'name.between'          => '傻瓜,用户名必须在3-25个字符之间!!!',
             'introduction.required' => '个人介绍内容不能为空',
-            'introduction.max'=>'个人介绍内容不能少于80个字 ',
+            'introduction.max'      => '个人介绍内容不能少于80个字 ',
+
         ];
     }
 }
