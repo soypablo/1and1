@@ -12,7 +12,8 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .sass('resources/assets/sass/home.scss', 'public/css');
 mix.browserSync({
     host: '192.168.10.10',
     proxy: 'larabbs.test',    // apache或iis等代理地址

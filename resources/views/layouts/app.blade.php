@@ -12,14 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 <body>
 <div id="{{route_name()}}-page">
     @include('layouts._header')
 
-        @include('common._message')
-        @yield('content')
+    @include('common._message')
+    @yield('content')
 
     @include('layouts._footer')
 </div>
