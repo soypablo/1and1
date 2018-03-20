@@ -11,22 +11,21 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css')
-    .sass('resources/assets/sass/home.scss', 'public/css');
+mix.js('resources/assets/js/app.js' , 'public/js')
+    .sass('resources/assets/sass/app.scss' , 'public/css')
+    .sass('public/css/home.scss' , 'public/css');
 mix.browserSync({
-    host: '192.168.10.10',
-    proxy: 'larabbs.test',    // apache或iis等代理地址
-    open: false,
-    files: [
-        'app/**/*.php',
-        'resources/views/**/*.php',
-        'packages/mixdinternet/frontend/src/**/*.php',
-        'public/js/*.js',
+    host : '192.168.10.10' ,
+    proxy : 'larabbs.test' ,    // apache或iis等代理地址
+    open : false ,
+    files : [
+        'app/**/*.php' ,
+        'resources/views/**/*.php' ,
+        'public/js/*.js' ,
         'public/css/*.css'
-    ],
-    watchOptions: {
-        usePolling: true,
-        interval: 500
+    ] ,
+    watchOptions : {
+        usePolling : true ,
+        interval : 300
     }
 });

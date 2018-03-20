@@ -1,8 +1,68 @@
 body {
-  color: red;
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
+  background-color: #F4F8FB;
 }
 
-body #div1 {
+header {
+  border-color: #e7e7e7;
+  -webkit-box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
+          box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
+  border-top: 4px solid #00b5ad;
+  margin-top: 0px;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+header .navbar-brand {
+  font-size: 1.3rem;
+}
+
+#header {
+  padding: 0;
+}
+
+footer {
   font-size: 1rem;
+}
+
+#register-page img.captcha {
+  cursor: pointer;
+}
+
+#users-show-page .users-show-title {
+  font-size: 2rem;
+}
+
+#users-show-page .users-show-title span {
+  font-size: 1.5rem;
+}
+
+#users-edit-page label {
+  font-size: 1.2rem;
+}
+
+#users-edit-page button {
+  font-weight: bold;
+}
+
+#topics-index-page .topic-top {
+  margin-top: 1rem;
+}
+
+#topics-index-page .card-body img {
+  width: 5rem;
+}
+
+#topics-index-page .nav-item a {
+  font-size: 1rem;
+  display: block;
+}
+
+#topics-index-page .topic-li {
+  padding-bottom: 0.5rem;
+}
+
+#topics-index-page .topic-right {
+  margin-left: 1rem;
 }
 

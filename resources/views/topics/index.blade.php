@@ -2,8 +2,8 @@
 @section('title','话题列表')
 
 @section('content')
-<div class="container">
-    <div class="row">
+<div class="container topic-top">
+    <div class="row topic-list">
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
@@ -17,10 +17,13 @@
                     </ul>
                 </div>
                 <div class="card-body">
-                    @include('topics._topic_list',['topics'=>$topics])
+                    @include('topics._topic_list',['topics'=>$topics,'first'=>$first])
                     {!! $topics->links('vendor/pagination/bootstrap-4') !!}
                 </div>
             </div>
+        </div>
+        <div class="cl-md-3 topic-right">
+            右边导航栏
         </div>
     </div>
 </div>
