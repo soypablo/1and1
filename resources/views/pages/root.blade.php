@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">项目</a>
+                    <a class="nav-link js-scroll-trigger" href="#about">项目栏</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#services">我们的服务</a>
