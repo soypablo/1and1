@@ -1,4 +1,4 @@
-@if($first)
+@if(count($topics))
     @foreach( $topics as $topic  )
         <ul class="list-unstyled media-list">
             <li class="media border-bottom topic-li">
@@ -7,7 +7,7 @@
                     <span class="badge-secondary badge-pill float-right">{{$topic->reply_count}}</span>
 
                     <h4 class="mt-0 mb-3">{{$topic->title}}</h4>
-                    <a href="{{route('categories.show',$topic->category->id)}}">
+                    <a href="{{route('categories.show',$topic->category->id)}}" title="类别:{{$topic->category->name}}">
                     <span class="text-muted"><i class="fa fa-question-circle-o" aria-hidden="true"></i>{{$topic->category->name}}</span>
                     </a>
                     <span> • </span>

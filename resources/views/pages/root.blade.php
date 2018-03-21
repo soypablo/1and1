@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>1and1</title>
+    <title>易加益公司首页</title>
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
+    <link href="{{asset('css/creative.css')}}" rel="stylesheet">
     {{--<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">--}}
 </head>
 <body id="page-top">
@@ -246,12 +246,12 @@
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+<script src="{{asset('vendor/scrollreveal/scrollreveal.min.js')}}"></script>
+<script src="{{asset('vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="js/creative.min.js"></script>
+<script src="{{asset('js/creative.min.js')}}"></script>
 
 </body>
 

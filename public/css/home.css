@@ -46,24 +46,29 @@ footer {
   font-weight: bold;
 }
 
-#topics-index-page .topic-top {
+#topics-index-page .topic-top,
+#categories-show-page .topic-top {
   margin-top: 1rem;
 }
 
-#topics-index-page .card-body img {
+#topics-index-page .card-body img,
+#categories-show-page .card-body img {
   width: 5rem;
 }
 
-#topics-index-page .nav-item a {
+#topics-index-page .nav-item a,
+#categories-show-page .nav-item a {
   font-size: 1rem;
   display: block;
 }
 
-#topics-index-page .topic-li {
+#topics-index-page .topic-li,
+#categories-show-page .topic-li {
   padding-bottom: 0.5rem;
 }
 
-#topics-index-page .topic-right {
+#topics-index-page .topic-right,
+#categories-show-page .topic-right {
   margin-left: 1rem;
 }
 
