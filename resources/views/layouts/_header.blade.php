@@ -1,7 +1,7 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light header" id="header">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>易加益信息技术有限公司
+            <i class="fa fa-user-circle" aria-hidden="true"></i>1and1.BBS
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

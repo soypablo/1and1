@@ -1,9 +1,8 @@
-@servers(['web' => 'root@192.168.0.100'])
+@servers(['web' => 'root@123.206.51.48'])
 
 @task('deploy')
-    cd /home/www/larabbs
-    git pull -u origin master
-    composer update --no-dev
-    chown www:www -R /home/www
-    chmod 755 -R /home/www
+cd /data/larabbs
+git pull -u origin master
+chown www:www -R /data/larabbs
+chmod 755 -R /data/larabbs
 @endtask

@@ -1,75 +1,98 @@
-body {
-  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
-  background-color: #F4F8FB;
+body
+{
+  font-family      : Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  background-color : #F4F8FB;
 }
 
 //header
-header{
-  border-color: #e7e7e7;
-  box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
-  border-top: 4px solid #00b5ad;
-  margin-top: 0px;
-  font-weight: bolder;
-  font-size:1.3rem;
-
-  .navbar-brand{
+header
+{
+  border-color : #e7e7e7;
+  box-shadow   : 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
+  border-top   : 4px solid #00b5ad;
+  margin-top   : 0px;
+  font-weight  : bolder;
+  font-size    : 1.3rem;
+  .navbar-brand
+  {
     font-size : 1.3rem;
+    color:#777777 !important;
   }
 }
-#header{
-  padding:0;
+
+
+#header
+{
+  padding : 0;
 }
 
 //footer
-footer{
-  font-size:1rem;
-
+footer
+{
+  font-size : 1rem;
 }
-//register
-#register-page{
-  img.captcha{
-    cursor : pointer;
 
+//register
+#register-page
+{
+  img.captcha
+  {
+    cursor : pointer;
   }
 }
+
 //users.show
-#users-show-page{
-  .users-show-title{
-    font-size: 2rem;
-    span{
+#users-show-page
+{
+  .users-show-title
+  {
+    font-size : 2rem;
+    span
+    {
       font-size : 1.5rem;
     }
   }
 }
+
 //users.edit
-#users-edit-page{
-  label{
-    font-size: 1.2rem;
+#users-edit-page
+{
+  label
+  {
+    font-size : 1.2rem;
   }
-  button{
-    font-weight: bold;
+  button
+  {
+    font-weight : bold;
   }
 }
 
 //topics.index
-#topics-index-page{
-  .topic-top{
-    margin-top:1rem;
+#topics-index-page
+{
+  .topic-top
+  {
+    margin-top : 1rem;
   }
 
-  .card-body{
-    img{
+  .card-body
+  {
+    img
+    {
       width : 5rem;
     }
   }
-    .nav-item a{
-      font-size:1rem;
-      display: block;
-    }
-  .topic-li{
-    padding-bottom: 0.5rem;
+  .nav-item a
+  {
+    font-size : 1rem;
+    display   : block;
   }
-  .topic-right{
+  .topic-li
+  {
+    padding-bottom : 0.5rem;
+  }
+  .topic-right
+  {
     margin-left : 1rem;
   }
 

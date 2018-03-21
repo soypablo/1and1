@@ -1,5 +1,5 @@
 body {
-  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
   background-color: #F4F8FB;
 }
 
@@ -15,6 +15,7 @@ header {
 
 header .navbar-brand {
   font-size: 1.3rem;
+  color: #777777 !important;
 }
 
 #header {
