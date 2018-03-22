@@ -48,6 +48,27 @@
                                     @endif
                                 </div>
                             </div>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-lg-4 pt-0 text-right">性别</legend>
+                                    <div class="col-lg-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gridRadios"
+                                                   id="gridRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="gridRadios1">
+                                                男
+                                            </label>
+
+                                            <span class="ml-5">
+                                            <input class="form-check-input" type="radio" name="gridRadios"
+                                                   id="gridRadios2" value="option2">
+                                            <label class="form-check-label" for="gridRadios2">
+                                                女
+                                            </label></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
 
                             <div class="form-group row">
                                 <label class="col-lg-4 col-form-label text-lg-right">密码</label>
@@ -94,7 +115,8 @@
                                             name="captcha"
                                             required
                                     >
-                                    <img class="img-thumbnail mt-1 captcha" src="{{captcha_src('flat')}}" alt="验证码" title="点击图片刷新验证码" onclick="this.src='/captcha/flat?'+Math.random()">
+                                    <img class="img-thumbnail mt-1 captcha" src="{{captcha_src('flat')}}" alt="验证码"
+                                         title="点击图片刷新验证码" onclick="this.src='/captcha/flat?'+Math.random()">
                                     @if ($errors->has('captcha'))
                                         <div class="invalid-feedback">
                                             <strong>{{ $errors->first('captcha') }}</strong>

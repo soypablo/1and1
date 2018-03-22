@@ -23,7 +23,6 @@ class UserTableSeeder extends Seeder
         $user->name     = 'soypablo';
         $user->email    = '25709255@qq.com';
         $user->password = bcrypt('123456');
-        $user->avatar   = \Illuminate\Support\Facades\Storage::url('avatar/2018/03/16/1_1521186874.jpg');
         $user->save();
 
     }

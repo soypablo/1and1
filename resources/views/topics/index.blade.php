@@ -25,10 +25,11 @@
                     @include('topics._topic_list',['topics'=>$topics])
                     {!! $topics->links('vendor/pagination/bootstrap-4') !!}
                 </div>
+
             </div>
         </div>
         <div class="cl-md-3 topic-right">
-            右边导航栏
+
         </div>
     </div>
 </div>
