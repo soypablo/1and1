@@ -13,8 +13,12 @@ body
   border-top   : 4px solid #00b5ad;
   margin-top   : 0px;
   font-weight  : bolder;
-  font-size    : 1.3rem;
+  font-size    : 1rem;
   padding : 0;
+  .nav-item a
+  {
+    display   : block;
+  }
   .navbar-brand
   {
     font-size : 1.3rem;
@@ -30,7 +34,7 @@ body
   .dropdown-menu{
     padding:0;
     a{
-    font-size:1rem;
+
     font-weight:bold !important;
     }
   }
@@ -84,12 +88,8 @@ footer
 }
 
 //topics.index
-#topics-index-page, #categories-show-page
+#topics-index-page,#categories-show-page
 {
-  .topic-top
-  {
-    margin-top : 1rem;
-  }
 
   .card-body
   {
@@ -98,11 +98,7 @@ footer
       width : 5rem;
     }
   }
-  .nav-item a
-  {
-    font-size : 1rem;
-    display   : block;
-  }
+
   .topic-li
   {
     padding-bottom : 0.5rem;

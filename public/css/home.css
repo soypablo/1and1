@@ -11,8 +11,12 @@ body {
   border-top: 4px solid #00b5ad;
   margin-top: 0px;
   font-weight: bolder;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0;
+}
+
+#header .nav-item a {
+  display: block;
 }
 
 #header .navbar-brand {
@@ -31,7 +35,6 @@ body {
 }
 
 #header .dropdown-menu a {
-  font-size: 1rem;
   font-weight: bold !important;
 }
 
@@ -59,20 +62,9 @@ footer {
   font-weight: bold;
 }
 
-#topics-index-page .topic-top,
-#categories-show-page .topic-top {
-  margin-top: 1rem;
-}
-
 #topics-index-page .card-body img,
 #categories-show-page .card-body img {
   width: 5rem;
-}
-
-#topics-index-page .nav-item a,
-#categories-show-page .nav-item a {
-  font-size: 1rem;
-  display: block;
 }
 
 #topics-index-page .topic-li,

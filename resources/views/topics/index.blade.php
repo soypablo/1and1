@@ -2,17 +2,17 @@
 @section('title',$category->name??'话题列表')
 
 @section('content')
-<div class="container topic-top">
+<div class="container mt-5">
     <div class="row topic-list">
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a href="" class="nav-link active">最后回复</a>
+                            <a href="{{ Request::url() }}?order=default" class="nav-link {{active_class( !if_query('order', 'recent') ) }}">最后回复</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">最新发布</a>
+                            <a href="{{ Request::url() }}?order=recent" class="nav-link {{active_class(if_query('order', 'recent'))}}">最新发布</a>
                         </li>
                     </ul>
                 </div>

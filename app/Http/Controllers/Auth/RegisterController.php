@@ -51,6 +51,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'sex'=>'required',
             'captcha'=>'required|captcha',
         ],[
             'captcha.required'=>'验证码不能为空',
@@ -66,10 +67,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if ($data['sex'] == 'boy')
+        {
+            $data['sex'] ='img/avatar/mans5ehp11z6s.png';
+        }else{
+            $data['sex'] ='img/avatar/NDnzMutoxX.png';
+        }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'avatar'=>$data['sex'],
         ]);
     }
 }

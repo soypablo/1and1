@@ -50,19 +50,19 @@
                             </div>
                             <fieldset class="form-group">
                                 <div class="row">
-                                    <legend class="col-form-label col-lg-4 pt-0 text-right">性别</legend>
+                                    <label class="col-form-label col-lg-4 pt-0 text-right">性别</label>
                                     <div class="col-lg-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                   id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
+                                            <input class="form-check-input" type="radio" name="sex"
+                                                   id="sex1" value="boy" checked>
+                                            <label class="form-check-label" for="sex1">
                                                 男
                                             </label>
 
                                             <span class="ml-5">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                   id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
+                                            <input class="form-check-input" type="radio" name="sex"
+                                                   id="sex2" value="girl">
+                                            <label class="form-check-label" for="sex2">
                                                 女
                                             </label></span>
                                         </div>
