@@ -54,6 +54,19 @@ footer {
   font-size: 1.5rem;
 }
 
+#users-show-page .meta {
+  color: #b3b3b3;
+}
+
+#users-show-page .meta-ul {
+  margin-bottom: 2rem !important;
+}
+
+#users-show-page .meta-ul a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
 #users-edit-page label {
   font-size: 1.2rem;
 }

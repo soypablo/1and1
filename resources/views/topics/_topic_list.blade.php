@@ -2,7 +2,7 @@
     @foreach( $topics as $topic  )
         <ul class="list-unstyled media-list">
             <li class="media border-bottom topic-li">
-                <img src="{{$topic->user->avatar}}" alt="" class="mr-3 img-thumbnail align-self-center">
+                <img src="{{asset($topic->user->avatar)}}" alt="" class="mr-3 img-thumbnail align-self-center">
                 <div class="media-body">
                     <span class="badge-secondary badge-pill float-right">{{$topic->reply_count}}</span>
 

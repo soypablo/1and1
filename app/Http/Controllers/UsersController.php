@@ -28,7 +28,8 @@ class UsersController extends Controller
     //显示 用户 页面
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        $topics = $user->topics()->orderByDesc('created_at')->paginate(5);
+        return view('users.show', compact('user','topics'));
     }
 
     //显示 编辑个人资料 页面

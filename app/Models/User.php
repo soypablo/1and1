@@ -60,4 +60,9 @@ class User extends Authenticatable
         return $upload_path;
 
     }
+
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
