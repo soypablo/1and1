@@ -14,18 +14,19 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js' , 'public/js')
     .sass('resources/assets/sass/app.scss' , 'public/css')
     .sass('public/css/home.scss' , 'public/css');
-// if (mix.inProduction()) {
-//     mix.version();
-// }
+if (mix.inProduction())
+{
+    mix.version();
+}
 mix.browserSync({
     host : '192.168.10.10' ,
     proxy : 'larabbs.test' ,    // apache或iis等代理地址
     open : false ,
     files : [
-        'app/**/*.php',
-        'resources/views/**/*.php',
-        'packages/mixdinternet/frontend/src/**/*.php',
-        'public/js/*.js',
+        'app/**/*.php' ,
+        'resources/views/**/*.php' ,
+        'packages/mixdinternet/frontend/src/**/*.php' ,
+        'public/js/*.js' ,
         'public/css/*.css'
     ] ,
     watchOptions : {
