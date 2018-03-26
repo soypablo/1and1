@@ -11,9 +11,10 @@
 
     <title>@yield('title','易加益')-易加益最牛逼</title>
     <!-- Styles -->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{mix('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('css/home.css')}}" rel="stylesheet">
+    <link href="{{mix('css/home.css')}}" rel="stylesheet">
+    @yield('style')
 
 </head>
 <body>
@@ -23,10 +24,11 @@
     @include('common._message')
     @yield('content')
 
-    @include('layouts._footer')
+
 </div>
 
 <!-- Scripts -->
-<script src="{{asset('js/app.js') }}"></script>
+<script src="{{mix('js/app.js') }}"></script>
+@yield('script')
 </body>
 </html>

@@ -146,5 +146,7 @@ return [
         'available' => '可用的',
         'size' => '大小',
         'avatar'=>'用户头像',
+        'body'=>'内容',
+        'category_id'=>'分类id号',
     ],
 ];

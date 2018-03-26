@@ -7,12 +7,7 @@ class Topic extends Model
     protected $fillable = [
         'title',
         'body',
-        'user_id',
         'category_id',
-        'reply_count',
-        'view_count',
-        'last_reply_user_id',
-        'order',
         'excerpt',
         'slug',
     ];
@@ -34,8 +29,8 @@ class Topic extends Model
                 $query = $query->orderBy('created_at', 'desc');
                 break;
             default:
-                $query = $query->orderBy('updated_at','desc');
+                $query = $query->orderBy('updated_at', 'desc');
         }
-        return $query->with('user','category');
+        return $query->with('user', 'category');
     }
 }

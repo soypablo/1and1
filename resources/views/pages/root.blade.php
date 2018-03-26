@@ -38,6 +38,9 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">联系我们</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('home')}}">产品论坛</a>
+                </li>
             </ul>
         </div>
     </div>

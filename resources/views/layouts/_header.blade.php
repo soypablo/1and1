@@ -1,6 +1,6 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light header" id="header">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ url('/home') }}">
             <i class="fa fa-user-circle" aria-hidden="true"></i>1and1.BBS
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -26,11 +26,11 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">论坛首页</a></li>
                 @if (Auth::guest())
                     <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">登陆</a></li>
                     <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">注册</a></li>
                 @else
+                    <li class="nav-item"><a href="{{ route('topics.create') }}" class="nav-link"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
