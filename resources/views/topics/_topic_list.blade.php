@@ -5,7 +5,7 @@
                 <img src="{{asset($topic->user->avatar)}}" alt="" class="mr-3 img-thumbnail align-self-center">
                 <div class="media-body">
                     <span class="badge-secondary badge-pill float-right">{{$topic->reply_count}}</span>
-                    <h4 class="mt-0 mb-3">{{$topic->title}}</h4>
+                    <h4 class="mt-0 mb-3"><a href="{{route('topics.show',[$topic])}}">{{$topic->title}}</a></h4>
                     <a href="{{route('categories.show',$topic->category->id)}}" title="类别:{{$topic->category->name}}">
                         <span class="text-muted"><i class="fa fa-list-ol"
                                                     aria-hidden="true"></i> {{$topic->category->name}}</span>

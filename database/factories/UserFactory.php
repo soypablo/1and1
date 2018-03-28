@@ -17,12 +17,12 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\User::class, function () {
     $avatar=[
-        'img/avatar/Lhd1SHqu86.png',
-        'img/avatar/LOnMrqbHJn.png',
-        'img/avatar/mans5ehp11z6s.png',
-        'img/avatar/manZqM7iaP4CR.png',
-        'img/avatar/NDnzMutoxX.png',
-        'img/avatar/xAuDMxteQy.png',
+        'img/1.png',
+        'img/2.png',
+        'img/3.png',
+        'img/4.png',
+        'img/5.png',
+
     ];
     $faker =Factory::create('zh_CN');
     $now = Carbon::now()->toDateTimeString();

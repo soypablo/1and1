@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Handlers\ImageUploadHandler;
 use App\Models\Category;
 use App\Models\Topic;
 use Auth;
@@ -9,6 +10,7 @@ use function dd;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
+use function view;
 
 class TopicsController extends Controller
 {
@@ -31,6 +33,7 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
+
         return view('topics.show', compact('topic'));
     }
 
@@ -55,14 +58,15 @@ class TopicsController extends Controller
     public function edit(Topic $topic)
     {
         $this->authorize('update', $topic);
-        return view('topics.create_and_edit', compact('topic'));
+        $categories = Category::all();
+        return view('topics.create_and_edit', compact('topic','categories'));
     }
 
     public function update(TopicRequest $request, Topic $topic)
     {
         $this->authorize('update', $topic);
         $topic->update($request->all());
-        return redirect()->route('topics.show', $topic->id)->with('message', 'Updated successfully.');
+        return redirect()->route('topics.show', $topic->id)->with('success', '上传成功！！');
     }
 
     public function destroy(Topic $topic)
@@ -70,6 +74,26 @@ class TopicsController extends Controller
         $this->authorize('destroy', $topic);
         $topic->delete();
 
-        return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
+        return redirect()->route('topics.index')->with('danger', '删除成功！');
+    }
+
+    public function uploadImage(Request $request,ImageUploadHandler $imageUploadHandler)
+    {
+        // 初始化返回数据,默认是失败的
+        $data = [
+            'success'   => false,
+            'msg'       => '上传失败!',
+            'file_path' => ''
+        ];
+        //判断是否有上传文件,并赋值给 $file
+        if($file = $request->upload_file){
+            $result = $imageUploadHandler->save($request->upload_file,'topics',Auth::id(),1024);
+            if($result){
+                $data['file_path']=true;
+                $data['msg']='图片上传成功';
+                $data['success']= true;
+            }
+        }
+        return $data;
     }
 }

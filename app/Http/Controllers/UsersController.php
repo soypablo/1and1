@@ -40,13 +40,13 @@ class UsersController extends Controller
     }
 
     //保存编辑过的个人资料
-    public function update(UserRequest $request, User $user)
+    public function update(UserRequest $request,ImageUploadHandler $imageUploadHandler,User $user)
     {
         $this->authorize('update',$user);
 
         Storage::disk('public')->delete($user->avatar);
         $data           = $request->all();
-        $path           = $user->uploadFile($request->avatar, $user->id, 200);
+        $path           = $imageUploadHandler->save($request->avatar,'avatar', $user->id,300);
         $data['avatar'] = $path;
         $user->update($data);
 

@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Topic;
+use function clean;
 use function make_excerpt;
 
 // creating, created, updating, updated, saving,
@@ -22,6 +23,7 @@ class TopicObserver
 
     public function saving(Topic $topic)
     {
+        $topic->body = clean($topic->body,'user_topic_body');
         $topic->excerpt = make_excerpt($topic->body);
     }
 }

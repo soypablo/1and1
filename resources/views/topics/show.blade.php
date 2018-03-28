@@ -1,62 +1,39 @@
 @extends('layouts.app')
-
+@section('title', $topic->title)
+@section('description', $topic->excerpt)
 @section('content')
-
-<div class="container">
-    <div class="col-md-10 col-md-offset-1">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h1>Topic / Show #{{ $topic->id }}</h1>
-            </div>
-
-            <div class="panel-body">
-                <div class="well well-sm">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="btn btn-link" href="{{ route('topics.index') }}"><i class="glyphicon glyphicon-backward"></i> Back</a>
-                        </div>
-                        <div class="col-md-6">
-                             <a class="btn btn-sm btn-warning pull-right" href="{{ route('topics.edit', $topic->id) }}">
-                                <i class="glyphicon glyphicon-edit"></i> Edit
-                            </a>
-                        </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{{\Illuminate\Support\Facades\Storage::url($topic->user->avatar)}}" alt=""
+                         class="card-img-top img-thumbnail">
+                    <div class="card-body">
+                        <a href="{{route('users.show',[$topic->user])}}">
+                            <h5 class="card-title text-center">作者:{{$topic->user->name}}</h5>
+                        </a>
                     </div>
                 </div>
-
-                <label>Title</label>
-<p>
-	{{ $topic->title }}
-</p> <label>Body</label>
-<p>
-	{{ $topic->body }}
-</p> <label>User_id</label>
-<p>
-	{{ $topic->user_id }}
-</p> <label>Category_id</label>
-<p>
-	{{ $topic->category_id }}
-</p> <label>Reply_count</label>
-<p>
-	{{ $topic->reply_count }}
-</p> <label>View_count</label>
-<p>
-	{{ $topic->view_count }}
-</p> <label>Last_reply_user_id</label>
-<p>
-	{{ $topic->last_reply_user_id }}
-</p> <label>Order</label>
-<p>
-	{{ $topic->order }}
-</p> <label>Excerpt</label>
-<p>
-	{{ $topic->excerpt }}
-</p> <label>Slug</label>
-<p>
-	{{ $topic->slug }}
-</p>
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header text-center article-meta">
+                        <h4 class="h2">{{$topic->title}}</h4>
+                        <div>发表于 {{$topic->created_at->diffForHumans()}} ⋅ 回复数 {{$topic->reply_count}}</div>
+                    </div>
+                    <div class="card-body topic-body">
+                        {!! $topic->body !!}
+                    </div>
+                </div>
+                <div class="operate">
+                    <hr>
+                    <a href="{{route('topics.edit',[$topic])}}" class="btn btn-success"><i class="fa fa-pencil-square-o"
+                                                                                           aria-hidden="true"></i>
+                        编辑</a>
+                    <a href="{{route('topics.destroy',[$topic])}}" class="btn btn-danger"><i class="fa fa-times-circle"
+                                                                                             aria-hidden="true"></i> 删除</a>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
 @endsection

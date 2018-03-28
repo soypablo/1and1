@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('style')
+    <link rel="stylesheet" type="text/css" href="{{asset('css/simditor.css')}}">
+@stop
+
 
 @section('content')
 
@@ -34,9 +38,9 @@
                                 </div>
                                 <div class="form-group">
                                     <select name="category_id" class="form-control" required>
-                                        <option value="" hidden disabled selected>请选择分类</option>
+                                        <option value="" hidden disabled {{ $topic->id ? '' : 'selected' }}>请选择分类</option>
                                         @foreach( $categories as $category )
-                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            <option value="{{$category->id}}" {{ $topic->category_id == $category->id ? 'selected' : '' }}>{{$category->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -46,8 +50,8 @@
                                           required>{{old('body',$topic->body)}}</textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">保存</button>
-                                <a class="btn btn-link pull-right" href="{{ route('topics.index') }}"><i class="fa fa-backward" aria-hidden="true"></i> 返回话题列表</a>
-
+                                <a class="btn btn-link pull-right" href="{{ route('topics.index') }}"><i
+                                            class="fa fa-backward" aria-hidden="true"></i> 返回话题列表</a>
                             </form>
             </div>
         </div>
@@ -55,3 +59,25 @@
 
 
 @endsection
+@section('script')
+    <script type="text/javascript" src="{{ asset('js/module.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/hotkeys.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/uploader.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
+    <script>
+        $(document).ready(function()
+        {
+            var editor = new Simditor({
+                textarea : $('#editor') ,
+                upload : {
+                    url : '{{ route('topics.upload_image') }}' ,
+                    params : {_token : '{{ csrf_token() }}'} ,
+                    fileKey :'upload_file' ,
+                    connectionCount : 3 ,
+                    leaveConfirm : '文件上传中，关闭此页面将取消上传。'
+                } ,
+                pasteImage : true
+            });
+        });
+    </script>
+@stop
