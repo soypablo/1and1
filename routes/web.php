@@ -5,7 +5,7 @@ Route::get('/','PagesController@root')->name('root');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('home','PagesController@home')->name('home');
+Route::get('home','TopicsController@index')->name('home');
 
 
 // Registration Routes...
@@ -29,3 +29,4 @@ Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'crea
 
 //CategoriesController
 Route::resource('categories', 'CategoriesController',['only'=>['show']]);
+Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

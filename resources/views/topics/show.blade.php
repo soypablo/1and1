@@ -25,13 +25,25 @@
                         {!! $topic->body !!}
                     </div>
                 </div>
-                <div class="operate">
-                    <hr>
-                    <a href="{{route('topics.edit',[$topic])}}" class="btn btn-success"><i class="fa fa-pencil-square-o"
-                                                                                           aria-hidden="true"></i>
-                        编辑</a>
-                    <a href="{{route('topics.destroy',[$topic])}}" class="btn btn-danger"><i class="fa fa-times-circle"
-                                                                                             aria-hidden="true"></i> 删除</a>
+                @can('update',$topic)
+                    <div class="operate w-25 mx-auto mt-3">
+                        <form action="{{route('topics.destroy',[$topic])}}" method="POST">
+                            {{csrf_field()}}
+                            {{method_field('DELETE')}}
+                            <a href="{{route('topics.edit',[$topic])}}" class="btn btn-success"><i
+                                        class="fa fa-pencil-square-o" aria-hidden="true"></i> 编辑</a>
+                            <button type="submit" class="btn btn-danger float-right"><i class="fa fa-times-circle" aria-hidden="true"></i> 删除
+                            </button>
+                        </form>
+                    </div>
+                @endcan
+                <hr>
+                <div class="card">
+                    <div class="card-header text-center reply-header"><i class="fa fa-volume-down" aria-hidden="true"></i> 回 复</div>
+                    <div class="card-body">
+                        @include('replies._reply_box',['topic'=>$topic])
+                        @include('replies._reply_list',['replies' =>$replies])
+                    </div>
                 </div>
             </div>
         </div>
