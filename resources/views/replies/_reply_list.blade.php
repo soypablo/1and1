@@ -3,7 +3,7 @@
         @foreach($replies as $reply )
             <li class="media border-bottom pb-2 mb-3">
                 <a href="{{route('users.show',[$reply->user_id])}}">
-                    <img class="mr-3 img-thumbnail" src="{{Storage::url($reply->user->avatar)}}"
+                    <img class="mr-3 img-thumbnail" src="{{asset('storage/'.$reply->user->avatar) }}"
                          alt="Generic placeholder image">
                 </a>
               <span class="reply-trash">  <a href="" title="删除回复">

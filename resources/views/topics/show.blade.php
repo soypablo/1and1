@@ -6,7 +6,7 @@
         <div class="row mt-5">
             <div class="col-md-3">
                 <div class="card">
-                    <img src="{{\Illuminate\Support\Facades\Storage::url($topic->user->avatar)}}" alt=""
+                    <img src="{{asset('storage/'.$topic->user->avatar) }}" alt=""
                          class="card-img-top img-thumbnail">
                     <div class="card-body">
                         <a href="{{route('users.show',[$topic->user])}}">

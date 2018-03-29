@@ -69,11 +69,11 @@ class RegisterController extends Controller
     {
         $file_path = 'avatar/'.date('Ym/d', time()).'/'.str_random(5).'.png';
         if($data['sex'] == 'boy'){
-            Storage::copy('avatar/1.png', 'public/'.$file_path);
+            Storage::disk('public')->copy('avatar/1.png',$file_path);
             $data['sex'] =$file_path;
         }
         else {
-             Storage::copy('avatar/2.png', 'public/'.$file_path);
+             Storage::disk('public')->copy('avatar/2.png',$file_path);
              $data['sex'] =$file_path;
         }
         return User::create([
