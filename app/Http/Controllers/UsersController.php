@@ -28,41 +28,30 @@ class UsersController extends Controller
     //显示 用户 页面
     public function show(User $user)
     {
-        $topics = $user->topics()->orderByDesc('created_at')->paginate(5);
-        return view('users.show', compact('user','topics'));
+        $topics  = $user->topics()->orderByDesc('created_at')->paginate(8);
+        $replies = $user->replies()->orderByDesc('created_at')->paginate(8);
+        return view('users.show', compact('user', 'topics', 'replies'));
     }
 
     //显示 编辑个人资料 页面
     public function edit(User $user)
     {
-        $this->authorize('update',$user);
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     //保存编辑过的个人资料
-    public function update(UserRequest $request,ImageUploadHandler $imageUploadHandler,User $user)
+    public function update(UserRequest $request, ImageUploadHandler $imageUploadHandler, User $user)
     {
-        $this->authorize('update',$user);
+        $this->authorize('update', $user);
 
         Storage::disk('public')->delete($user->avatar);
         $data           = $request->all();
-        $path           = $imageUploadHandler->save($request->avatar,'avatar', $user->id,300);
+        $path           = $imageUploadHandler->save($request->avatar, 'avatar', $user->id, 300);
         $data['avatar'] = $path;
         $user->update($data);
 
         return redirect()->route('users.show', [$user])->with('success', '资料已经修改成功了~~');
-
     }
 
-    public function test()
-    {
-        $array           = [
-            'name'   => 'xiang',
-            'age'    => 35,
-            'avatar' => '123',
-        ];
-        $array2          = ['path' => '/a/b'];
-        $array['avatar'] = $array2['path'];
-        dd($array);
-    }
 }

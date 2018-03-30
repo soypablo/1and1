@@ -45,7 +45,7 @@ class User extends Authenticatable
     }
 
 
-    public function uploadFile($file,$folder,$prefix,$max_width)
+    public function uploadFile($file, $folder, $prefix, $max_width)
     {
         $path        = 'avatar/'.date('Y', time()).'/'.date('m', time()).'/'.date('d', time());
         $extension   = strtolower($file->getClientOriginalExtension()) ?? 'png';
@@ -68,6 +68,6 @@ class User extends Authenticatable
 
     public function replies()
     {
-        $this->hasMany(Reply::class);
+        return $this->hasMany(Reply::class);
     }
 }

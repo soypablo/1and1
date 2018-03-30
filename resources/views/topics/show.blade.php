@@ -32,16 +32,18 @@
                             {{method_field('DELETE')}}
                             <a href="{{route('topics.edit',[$topic])}}" class="btn btn-success"><i
                                         class="fa fa-pencil-square-o" aria-hidden="true"></i> 编辑</a>
-                            <button type="submit" class="btn btn-danger float-right"><i class="fa fa-times-circle" aria-hidden="true"></i> 删除
+                            <button type="submit" class="btn btn-danger float-right"><i class="fa fa-times-circle"
+                                                                                        aria-hidden="true"></i> 删除
                             </button>
                         </form>
                     </div>
                 @endcan
                 <hr>
                 <div class="card">
-                    <div class="card-header text-center reply-header"><i class="fa fa-volume-down" aria-hidden="true"></i> 回 复</div>
+                    <div class="card-header">
+                        @includeWhen(Auth::check(),'replies._reply_box',['topic'=>$topic])
+                    </div>
                     <div class="card-body">
-                        @include('replies._reply_box',['topic'=>$topic])
                         @include('replies._reply_list',['replies' =>$replies])
                     </div>
                 </div>

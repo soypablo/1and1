@@ -11,7 +11,7 @@ class ReplysTableSeeder extends Seeder
     {
         $user_ids  = User::all()->pluck('id')->toArray();
         $topic_ids = Topic::all()->pluck('id')->toArray();
-        $replys    = factory(Reply::class)->times(600)->make()->each(function($reply, $index) use ($user_ids, $topic_ids) {
+        $replys    = factory(Reply::class)->times(2000)->make()->each(function($reply, $index) use ($user_ids, $topic_ids) {
             $reply->user_id = array_random($user_ids);
             $reply->topic_id = array_random($topic_ids);
 

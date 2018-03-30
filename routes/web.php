@@ -19,7 +19,6 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 //UsersController
-Route::get('test','UsersController@test');
 Route::resource('users', 'UsersController',['only'=>['show','update','edit']]);
 
 //TopicsController

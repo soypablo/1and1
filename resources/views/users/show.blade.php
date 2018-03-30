@@ -28,31 +28,21 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Ta的话题</a>
+                                <a class="nav-link {{active_class(if_query('tab',null))}}"
+                                   href="{{route('users.show',[$user])}}">Ta的话题</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Ta的回复</a>
+                                <a class="nav-link {{active_class(if_query('tab','replies'))}}"
+                                   href="{{route('users.show',[$user->id,'tab'=>'replies'])}}">Ta的回复</a>
                             </li>
                         </ul>
                     </div>
                     <div class="card-body">
-                        @if(count($topics))
-                            <ul class="list-group list-group-flush meta-ul">
-                                @foreach( $topics as $topic )
-                                    <li class="list-group-item list-group-item-action">
-                                        <a href="{{route('topics.show',[$topic])}}">{{$topic->title}}</a>
-                                        <span class="float-right meta">
-                                            {{$topic->reply_count}}回复
-                                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                                           发表于{{$topic->created_at->diffForHumans()}}
-                                        </span>
-                                    </li>
-                                @endforeach
-                            </ul>
-                            {!! $topics->links('vendor/pagination/bootstrap-4') !!}
-
+                        @if(if_query('tab','replies'))
+                            @include('users._replies',['replies'=>$replies])
                         @else
-                            <div>暂无数据</div>
+                            @include('users._topics',['topics'=>$topics])
+
                         @endif
                     </div>
 
