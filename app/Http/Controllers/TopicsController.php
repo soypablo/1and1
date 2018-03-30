@@ -33,7 +33,7 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
-        $replies = $topic->replies()->with('user')->paginate(8);
+        $replies = $topic->replies()->with('user')->orderByDesc('created_at')->paginate(8);
 
         return view('topics.show', compact('topic','replies'));
     }

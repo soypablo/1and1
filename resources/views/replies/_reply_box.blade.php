@@ -1,6 +1,6 @@
 @include('common.error')
 <div class="rply-box">
-    <form action="" method="post">
+    <form action="{{route('replies.store')}}" method="post" accept-charset="UTF-8">
         {{csrf_field()}}
         <input type="hidden" name="topic_id" value="{{$topic->id}}">
         <div class="form-group">
