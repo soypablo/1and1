@@ -13,7 +13,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item "><a href="{{ route('root') }}"
+                <li class="nav-item "><a href="{{ route('pages.root') }}"
                                          class="nav-link nav-link-1 {{active_class(if_route('topics.index'))}}">首页</a>
                 </li>
                 <li class="nav-item "><a href="#"

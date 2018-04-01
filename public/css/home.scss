@@ -1,7 +1,6 @@
 body
 {
   font-family      : Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
-
   background-color : #F4F8FB;
 }
 
@@ -10,10 +9,10 @@ $height : 2.8rem;
 .header-div
 {
   height           : $height;
-  background-image: url('../img/header2.jpg');
-//  background: #3d19b0;
+  background-image : url('../img/header2.jpg');
+  //  background: #3d19b0;
   text-align       : center;
-  box-shadow   : 0px 1px 11px 2px blue;
+  box-shadow       : 0px 1px 11px 2px blue;
 
   .header-font
   {
@@ -35,8 +34,9 @@ $height : 2.8rem;
   font-weight  : bolder;
   font-size    : 1rem;
   padding      : 0;
-  .nav-link-1{
-    color:#ff6900 !important;
+  .nav-link-1
+  {
+    color : #ff6900 !important;
   }
   .nav-item a
   {
@@ -102,6 +102,70 @@ footer
     {
       text-decoration-line : none;
     }
+  }
+}
+
+//pages.root
+#pages-root-page
+{
+  .span1{
+    font-size: 1.5rem;
+
+
+  }
+  #nav-card{
+    height :15%;
+  }
+  #nav-tab{
+    height:100%;
+  }
+  .nav-tabs{
+    a{
+      width :33.333333%;
+      text-align: center;
+      height :100%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction :column;
+
+    }
+    .nav-link.active{
+      background-color: white;
+    }
+    .nav-link{
+      background-color:#E8E8E8;
+    }
+  }
+
+  .notice-content{
+    font-size: 1.2rem;
+  }
+  .slogon {
+    color: #d7d7d7;
+    text-align: center;
+
+
+    height:15%;
+  }
+  .card-list{
+    height:70%;
+    width :63%;
+    background: white;
+  }
+  .z-grid {
+    width: 1190px;
+    margin: 0 auto;
+  }
+  .slogon-tit {
+    font-size: 26px;
+    color: #fff;
+  }
+  .index-banner
+  {
+    height     : 715px;
+    overflow   : hidden;
+    background : #f6f6f6 url("../img/bodyimg.png") no-repeat center center;
   }
 }
 

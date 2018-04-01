@@ -1,11 +1,11 @@
 <?php
 use App\Http\Controllers\UsersController;
 
-Route::get('/','PagesController@root')->name('root');
+Route::get('/','PagesController@root')->name('pages.root');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('home','TopicsController@index')->name('home');
+Route::get('home','TopicsController@index')->name('pages.home');
 
 
 // Registration Routes...
