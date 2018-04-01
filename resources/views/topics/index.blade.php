@@ -2,7 +2,7 @@
 @section('title',$category->name??'话题列表')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container  mt-5">
         <div class="row topic-list">
             <div class="col-md-9">
                 <div class="card">

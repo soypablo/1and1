@@ -5,16 +5,35 @@ body {
   background-color: #F4F8FB;
 }
 
-#header {
+.header-div {
   height: 2.8rem;
+  background-image: url(/images/header2.jpg?01f967f6fe9d05e5cb2a34aedd181c38);
+  text-align: center;
+  -webkit-box-shadow: 0px 1px 11px 2px blue;
+          box-shadow: 0px 1px 11px 2px blue;
+}
+
+.header-div .header-font {
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: .8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+}
+
+#header {
+  height: 4rem;
   border-color: #e7e7e7;
   -webkit-box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
           box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
-  border-top: 4px solid #00b5ad;
   margin-top: 0px;
   font-weight: bolder;
   font-size: 1rem;
   padding: 0;
+}
+
+#header .nav-link-1 {
+  color: #ff6900 !important;
 }
 
 #header .nav-item a {
@@ -80,7 +99,7 @@ footer {
 #topics-index-page .card-body img,
 #categories-show-page .card-body img,
 #home-page .card-body img {
-  width: 5rem;
+  width: 3.5rem;
 }
 
 #topics-index-page .topic-li,
@@ -577,5 +596,29 @@ footer {
   /*文本占的行数,如果要设置2行加...则设置为2*/
   -webkit-box-orient: vertical;
   /*子代元素垂直显示*/
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1340px;
+  }
 }
 

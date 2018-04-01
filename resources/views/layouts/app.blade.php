@@ -21,7 +21,6 @@
 <body>
 <div id="{{route_name()}}-page">
     @include('layouts._header')
-
     @include('common._message')
     @yield('content')
 

@@ -1,20 +1,43 @@
 body
 {
   font-family      : Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+
   background-color : #F4F8FB;
 }
 
 //header
+$height : 2.8rem;
+.header-div
+{
+  height           : $height;
+  background-image: url('../img/header2.jpg');
+//  background: #3d19b0;
+  text-align       : center;
+  box-shadow   : 0px 1px 11px 2px blue;
+
+  .header-font
+  {
+    font-size      : 2rem;
+    font-weight    : bolder;
+    letter-spacing : .8rem;
+    height         : $height;
+    line-height    : $height;
+  }
+;
+}
+
 #header
 {
-  height       : 2.8rem;
+  height       : 4rem;
   border-color : #e7e7e7;
   box-shadow   : 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
-  border-top   : 4px solid #00b5ad;
   margin-top   : 0px;
   font-weight  : bolder;
   font-size    : 1rem;
   padding      : 0;
+  .nav-link-1{
+    color:#ff6900 !important;
+  }
   .nav-item a
   {
     display : block;
@@ -96,14 +119,14 @@ footer
 }
 
 //topics.index
-#topics-index-page, #categories-show-page,#home-page
+#topics-index-page, #categories-show-page, #home-page
 {
 
   .card-body
   {
     img
     {
-      width : 5rem;
+      width : 3.5rem;
     }
   }
 
@@ -486,20 +509,25 @@ footer
 }
 
 #topics-show-page
-{ .reply-header{
-  font-size: 1.5rem;
-}
+{
+  .reply-header
+  {
+    font-size : 1.5rem;
+  }
   .reply-list
   {
 
-    li{
-      position:relative;
-      .reply-trash{
-        position:absolute;
-        right : 0;
-        top : 0;
-        i{
-          color:red;
+    li
+    {
+      position : relative;
+      .reply-trash
+      {
+        position : absolute;
+        right    : 0;
+        top      : 0;
+        i
+        {
+          color : red;
         }
 
       }
@@ -511,12 +539,45 @@ footer
     }
     .media-body .reply-content
     {
-      overflow:hidden;/*超出隐藏*/
-      text-overflow:ellipsis;/*文本溢出时显示省略标记*/
-      display:-webkit-box;/*设置弹性盒模型*/
-      -webkit-line-clamp:2;/*文本占的行数,如果要设置2行加...则设置为2*/
-      -webkit-box-orient:vertical;/*子代元素垂直显示*/
+      overflow           : hidden; /*超出隐藏*/
+      text-overflow      : ellipsis; /*文本溢出时显示省略标记*/
+      display            : -webkit-box; /*设置弹性盒模型*/
+      -webkit-line-clamp : 2; /*文本占的行数,如果要设置2行加...则设置为2*/
+      -webkit-box-orient : vertical; /*子代元素垂直显示*/
     }
 
+  }
+}
+
+//.container
+@media (min-width : 576px)
+{
+  .container
+  {
+    max-width : 540px;
+  }
+}
+
+@media (min-width : 768px)
+{
+  .container
+  {
+    max-width : 720px;
+  }
+}
+
+@media (min-width : 992px)
+{
+  .container
+  {
+    max-width : 1024px;
+  }
+}
+
+@media (min-width : 1200px)
+{
+  .container
+  {
+    max-width : 1340px;
   }
 }
