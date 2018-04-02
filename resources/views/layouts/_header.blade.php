@@ -3,8 +3,8 @@
 </div>
 <header class="navbar navbar-expand-lg navbar-light bg-light header" id="header">
     <div class="container">
-        <a class="navbar-brand nav-item-1" href="{{ url('/home') }}">
-            <i class="fa fa-user-circle nav-item-1" aria-hidden="true"></i> <span class="nav-link-1">易加益</span>
+        <a class="navbar-brand nav-item-1" href="{{ url('/') }}">
+            <span class="nav-link-1"><img class="navbar-img" src="{{asset('img/logo.jpg')}}" alt=""></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,20 +24,22 @@
                                          class="nav-link {{active_class(if_route('topics.index'))}}">发布需求</a></li>
                 <li class="nav-item "><a href="#"
                                          class="nav-link {{active_class(if_route('topics.index'))}}">交易大厅</a></li>
-                <li class="nav-item "><a href="{{ route('topics.index') }}"
-                                         class="nav-link {{active_class(if_route('topics.index'))}}">话题</a></li>
-                <li class="nav-item "><a href="{{ route('categories.show', 1) }}"
-                                         class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',1))}}">分享</a>
-                </li>
-                <li class="nav-item "><a href="{{ route('categories.show', 2) }}"
-                                         class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',2))}}">教程</a>
-                </li>
-                <li class="nav-item "><a href="{{ route('categories.show', 3) }}"
-                                         class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',3))}}">问答</a>
-                </li>
-                <li class="nav-item "><a href="{{ route('categories.show', 4) }}"
-                                         class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',4))}}">公告</a>
-                </li>
+                @auth
+                    <li class="nav-item "><a href="{{ route('topics.index') }}"
+                                             class="nav-link {{active_class(if_route('topics.index'))}}">话题</a></li>
+                    <li class="nav-item "><a href="{{ route('categories.show', 1) }}"
+                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',1))}}">分享</a>
+                    </li>
+                    <li class="nav-item "><a href="{{ route('categories.show', 2) }}"
+                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',2))}}">教程</a>
+                    </li>
+                    <li class="nav-item "><a href="{{ route('categories.show', 3) }}"
+                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',3))}}">问答</a>
+                    </li>
+                    <li class="nav-item "><a href="{{ route('categories.show', 4) }}"
+                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',4))}}">公告</a>
+                    </li>
+                @endauth
             </ul>
             <ul class="navbar-nav ml-auto">
                 @if (Auth::guest())

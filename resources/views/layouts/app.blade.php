@@ -14,7 +14,7 @@
     <!-- Styles -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('css/home.css')}}" rel="stylesheet">
+    <link href="{{mix('css/home.css')}}" rel="stylesheet">
     @yield('style')
 
 </head>
@@ -23,8 +23,7 @@
     @include('layouts._header')
     @include('common._message')
     @yield('content')
-
-
+    @include('layouts._footer')
 </div>
 
 <!-- Scripts -->

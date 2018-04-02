@@ -9,8 +9,8 @@ $height : 2.8rem;
 .header-div
 {
   height           : $height;
-  background-image : url('../img/header2.jpg');
-  //  background: #3d19b0;
+  background-image : url('/img/header2.jpg');
+  //background: #3d19b0;
   text-align       : center;
   box-shadow       : 0px 1px 11px 2px blue;
 
@@ -34,6 +34,11 @@ $height : 2.8rem;
   font-weight  : bolder;
   font-size    : 1rem;
   padding      : 0;
+
+  img
+  {
+    max-width : 10rem;
+  }
   .nav-link-1
   {
     color : #ff6900 !important;
@@ -108,65 +113,101 @@ footer
 //pages.root
 #pages-root-page
 {
-  .span1{
-    font-size: 1.5rem;
 
+  .line
+  {
+    display       : inline-block;
+    width         : 120px;
+    border-top    : 1px solid #E8E8E8;
+    height        : 2px;
+    margin-bottom : 3px;
+  }
 
-  }
-  #nav-card{
-    height :15%;
-  }
-  #nav-tab{
-    height:100%;
-  }
-  .nav-tabs{
-    a{
-      width :33.333333%;
-      text-align: center;
-      height :100%;
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction :column;
-
+  .span1
+  {
+    font-size : 1.6rem;
+    small{
+      font-size : 1rem;
     }
-    .nav-link.active{
-      background-color: white;
+
+  }
+
+  #nav-card
+  {
+    height : 15%;
+  }
+
+  #nav-tab
+  {
+    height : 100%;
+  }
+
+  .nav-tabs
+  {
+
+    a
+    {
+      border-bottom-color : white;
+      width               : 33.333333%;
+      text-align          : center;
+      border-left-color   : white;
+      border-right-color  : white;
+      display             : flex;
+      align-items         : center;
+      justify-content     : center;
+      flex-direction      : column;
+      color : black;
     }
-    .nav-link{
-      background-color:#E8E8E8;
+    .nav-link.active
+    {
+      background-color : white;
+    }
+    .nav-link
+    {
+      background-color : #E8E8E8;
     }
   }
 
-  .notice-content{
-    font-size: 1.2rem;
+  .notice-content
+  {
+    font-size : 1.2rem;
   }
-  .slogon {
-    color: #d7d7d7;
-    text-align: center;
 
+  .slogon
+  {
+    color      : #d7d7d7;
+    text-align : center;
+    height     : 15%;
+  }
 
-    height:15%;
+  .card-list
+  {
+    height     : 70%;
+    width      : 63%;
+    background : white;
+    box-shadow: 0 3px 40px 0 rgba(0,0,0,.5);
+    border-radius: 0.5rem;
   }
-  .card-list{
-    height:70%;
-    width :63%;
-    background: white;
+
+  .z-grid
+  {
+    width  : 1190px;
+    margin : 0 auto;
   }
-  .z-grid {
-    width: 1190px;
-    margin: 0 auto;
+
+  .slogon-tit
+  {
+    font-size : 26px;
+    color     : #fff;
   }
-  .slogon-tit {
-    font-size: 26px;
-    color: #fff;
-  }
+
   .index-banner
   {
     height     : 715px;
     overflow   : hidden;
-    background : #f6f6f6 url("../img/bodyimg.png") no-repeat center center;
+    background : #f6f6f6 url("/img/bodyimg.png") no-repeat center center;
   }
+
 }
 
 //users.edit
@@ -446,14 +487,7 @@ footer
     color       : #777;
     border-left : 4px solid #ddd;
   }
-  blockquote > :first-child
-  {
-    margin-top : 20;
-  }
-  blockquote > :last-child
-  {
-    margin-bottom : 20;
-  }
+
   blockquote
   {
     margin           : 20px 0 !important;
