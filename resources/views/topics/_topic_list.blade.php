@@ -2,7 +2,7 @@
     @foreach( $topics as $topic  )
         <ul class="list-unstyled media-list">
             <li class="media border-bottom topic-li">
-                <a href="{{route('users.show',[$topic->user->id])}}"> <img src="{{asset('/storage/'.$topic->user->avatar)}}" alt="" class="mr-3 img-thumbnail rounded-circle align-self-center"></a>
+                <a href="{{route('users.show',[$topic->user->id])}}"> <img id="list-img" src="{{asset('/storage/'.$topic->user->avatar)}}" alt="" class="mr-3 img-thumbnail rounded-circle align-self-center"></a>
                 <div class="media-body">
                     <span class="badge-secondary badge-pill float-right">{{$topic->reply_count}}</span>
                     <h4 class="mt-0 mb-3"><a href="{{route('topics.show',[$topic])}}">{{$topic->title}}</a></h4>

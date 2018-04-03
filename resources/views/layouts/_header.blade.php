@@ -46,6 +46,11 @@
                     <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">登陆</a></li>
                     <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">注册</a></li>
                 @else
+                    <li class="nav-item">
+                        <a href="{{route('notifications.index')}}" class="nav-link" title="消息提醒">
+                            <span class="badge badge-pill badge-{{Auth::user()->notification_count>0 ? 'danger':'secondary'}}">{{Auth::user()->notification_count}}</span>
+                        </a>
+                    </li>
                     <li class="nav-item"><a href="{{ route('topics.create') }}" class="nav-link"><i class="fa fa-plus"
                                                                                                     aria-hidden="true"></i></a>
                     </li>

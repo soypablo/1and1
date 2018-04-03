@@ -224,18 +224,12 @@ footer
 }
 
 //topics.index
-#topics-index-page, #categories-show-page, #home-page
+#topics-index-page, #categories-show-page, #pages-home-page
 {
-
-  .card-body
-  {
-    img
-    {
-      width : 3.5rem;
-    }
+  #list-img{
+    max-width: 3.5rem;
   }
-
-  .topic-li
+    .topic-li
   {
     padding-bottom : 0.5rem;
   }
@@ -677,5 +671,21 @@ footer
   .container
   {
     max-width : 1340px;
+  }
+}
+
+//notifications.index
+#notifications-index-page{
+  .reply-content{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  .media-img{
+    max-width:4rem;
+  }
+  .repliy-li{
+    display: flex;
+    align-items: center;
   }
 }

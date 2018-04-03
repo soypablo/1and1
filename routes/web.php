@@ -28,5 +28,9 @@ Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'crea
 
 //CategoriesController
 Route::resource('categories', 'CategoriesController',['only'=>['show']]);
+
 //RepliesController
 Route::resource('replies', 'RepliesController', ['only' => [ 'store','destroy']]);
+
+//NotificationsController
+Route::resource('notifications', 'NotificationsController',['only'=>['index','destroy']]);
