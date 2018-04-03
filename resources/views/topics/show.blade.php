@@ -32,6 +32,7 @@
                             {{method_field('DELETE')}}
                             <a href="{{route('topics.edit',[$topic])}}" class="btn btn-success"><i
                                         class="fa fa-pencil-square-o" aria-hidden="true"></i> 编辑</a>
+
                             <button type="submit" class="btn btn-danger float-right"><i class="fa fa-times-circle"
                                                                                         aria-hidden="true"></i> 删除
                             </button>
@@ -41,10 +42,12 @@
                 <hr>
                 <div class="card">
                     <div class="card-header">
-                        @includeWhen(Auth::check(),'replies._reply_box',['topic'=>$topic])
+                        @cannot('update',$topic)
+                            @includeWhen(Auth::check(),'replies._reply_box',['topic'=>$topic])
+                        @endcannot
                     </div>
                     <div class="card-body">
-                        @include('replies._reply_list',['replies' =>$replies])
+                        @include('replies._reply_list',['replies' =>$replies,'topic'=>$topic])
                     </div>
                 </div>
             </div>

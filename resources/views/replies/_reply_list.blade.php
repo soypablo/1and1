@@ -7,12 +7,19 @@
                         <img class="mr-3 img-thumbnail" src="{{asset('storage/'.$reply->user->avatar) }}"
                              alt="Generic placeholder image">
                     </a>
-                    <span class="reply-trash">  <a href="" title="删除回复">
-                        <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
-                    </a></span>
+                    @can('destroy',$topic)
+                        <span class="reply-trash">
+                        <form action="{{route('replies.destroy',[$reply])}}"
+                              method="post">{{csrf_field()}}{{method_field('DELETE')}}
+                            <button type="submit" class="btn btn-link" title="删除"><i class="fa fa-trash-o fa-lg"
+                                                                                     aria-hidden="true"></i></button>
+                        </form>
+                    </span>
+                    @endcan
                     <div class="media-body">
                         <h5 class="mt-0 mb-1"><a
-                                    href="{{route('users.show',[$reply->user_id])}}">{{$reply->user->name}}</a> <i class="fa fa-clock-o" aria-hidden="true"></i> 回复于 <span
+                                    href="{{route('users.show',[$reply->user_id])}}">{{$reply->user->name}}</a> <i
+                                    class="fa fa-clock-o" aria-hidden="true"></i> 回复于 <span
                                     class="text-muted">{{$reply->updated_at->diffForHumans()}} </span></h5>
                         <p class="reply-content">{!! $reply->content !!}
                         </p>

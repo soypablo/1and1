@@ -38,5 +38,7 @@ class UserTableSeeder extends Seeder
         $user->password = bcrypt('123456');
         $user->save();
 
+
+
     }
 }

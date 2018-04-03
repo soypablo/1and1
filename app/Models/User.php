@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Image;
 use function md5;
 use function public_path;
+use Spatie\Permission\Traits\HasRoles;
 use function strtolower;
 use function time;
 use function trim;
@@ -19,6 +20,7 @@ class User extends Authenticatable
     use Notifiable{
         notify as protected laravelNotify;
     }
+    use HasRoles;
     public function notify($instance)
     {
         // 如果要通知的人是当前用户，就不必通知了！
