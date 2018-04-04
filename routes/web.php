@@ -7,7 +7,9 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('home','TopicsController@index')->name('pages.home');
 
-
+Route::get('test', function() {
+   echo env('APP_NAME');
+});
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
