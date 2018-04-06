@@ -63,11 +63,12 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            @can('manage_contents')
-                            <a href="{{url(config('administrator.uri'))}}" class="dropdown-item"><i class="fa fa-users" aria-hidden="true"></i>
-                                管理后台</a>
-                            <div class="dropdown-divider"></div>
-                            @endcan
+                            @if(Auth::user()->hasRole('Founder'))
+                                <a href="{{url(config('administrator.uri'))}}" class="dropdown-item"><i
+                                            class="fa fa-users" aria-hidden="true"></i>
+                                    管理后台</a>
+                                <div class="dropdown-divider"></div>
+                            @endif
                             <a href="{{route('users.show',[Auth::user()])}}" class="dropdown-item"><i class="fa fa-user"
                                                                                                       aria-hidden="true"></i>
                                 个人中心</a>

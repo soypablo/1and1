@@ -59,9 +59,14 @@ return array(
      *	)
      */
     'menu' => [
-        '用户与权限'=>[
+        '用户管理'=>[
             'users',
-        ]
+        ],
+        '内容管理'=>[
+            'categories',
+            'topics',
+            'replies',
+        ],
     ],
 
     /*
@@ -71,7 +76,7 @@ return array(
      * @type closure
      */
     'permission' => function () {
-        return Auth::check() && Auth::user()->can('manage_contents');
+        return Auth::check() && Auth::user()->hasRole('Founder');
     },
 
     /*

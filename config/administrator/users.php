@@ -4,7 +4,7 @@ use App\Models\User;
 
 return [
     //页面标题
-    'title'       => '用户 管理',
+    'title'       => '用户',
 
     //模型单数,用作页面 新建
     'single'      => '用户',
@@ -23,7 +23,9 @@ return [
 
         // 列的标示，这是一个最小化『列』信息配置的例子，读取的是模型里对应
         // 的属性的值，如 $model->id
-        'id',
+        'id'=>[
+            'title'=>'ID',
+        ],
 
         'avatar' => [
             // 数据表格里列的名称，默认会使用『列标识』
@@ -78,7 +80,7 @@ return [
             'type'     => 'image',
 
             // 图片上传必须设置图片存放路径
-            'location' => storage_path().'/app/public/',
+            'location' => storage_path().'/app/public/avatar/',
         ],
         'roles'    => [
             'title'      => '用户角色',

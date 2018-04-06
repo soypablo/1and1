@@ -6,11 +6,14 @@ use Auth;
 use function date;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Image;
 use function md5;
 use function public_path;
 use Spatie\Permission\Traits\HasRoles;
+use function starts_with;
+use function strlen;
 use function strtolower;
 use function time;
 use function trim;
@@ -91,5 +94,21 @@ class User extends Authenticatable
         $this->save();
 
         $this->unreadNotifications->markAsRead();
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        if(strlen($value) != 60){
+            $value= Hash::make($value);
+        }
+        $this->attributes['password'] = $value;
+    }
+
+    public function setAvatarAttribute($value)
+    {
+        if(! starts_with($value, 'avatar/')){
+            $value = 'avatar/'.$value;
+        }
+        $this->attributes['avatar'] = $value;
     }
 }
