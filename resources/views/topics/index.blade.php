@@ -35,9 +35,28 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{route('topics.create')}}" class="btn btn-success btn-block text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 新建话题</a>
+                        <a href="{{route('topics.create')}}" class="btn btn-success btn-block text-light"><i
+                                    class="fa fa-pencil-square-o" aria-hidden="true"></i> 新建话题</a>
                     </div>
                 </div>
+                @if(count($active_users))
+                    <div class="card mt-3">
+                        <div class="card-header text-center">活跃用户</div>
+                        <div class="card-body">
+                            <ul class="list-unstyled media-list">
+                                @foreach( $active_users as $active_user )
+                                    <li class="media border-bottom topic-li pt-2">
+                                        <a href=""> <img id="list-img" src="{{asset('/storage/'.$active_user->avatar)}}"
+                                                         alt=""
+                                                         class="mr-3 img-thumbnail rounded-circle align-self-center"></a>
+                                        {{$active_user->name}}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endif
+
             </div>
 
 

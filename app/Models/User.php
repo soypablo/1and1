@@ -20,10 +20,13 @@ use function trim;
 
 class User extends Authenticatable
 {
+    use Traits\ActiveUser;
+    use Traits\LastActivedAtHelper;
     use Notifiable{
         notify as protected laravelNotify;
     }
     use HasRoles;
+
     public function notify($instance)
     {
         // 如果要通知的人是当前用户，就不必通知了！

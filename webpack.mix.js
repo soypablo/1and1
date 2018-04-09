@@ -33,6 +33,6 @@ mix.browserSync({
     ] ,
     watchOptions : {
         usePolling : true ,
-        interval : 500
+        interval : 300
     }
 });
