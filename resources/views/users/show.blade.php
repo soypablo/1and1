@@ -12,7 +12,9 @@
                         <p class="card-text">{{$user->introduction}}</p>
                         <hr>
                         <h4 class="card-title">注册于</h4>
-                        <p class="card-text">{{$user->created_at->diffForHumans()}}</p>
+                        <p class="card-text">{{$user->created_at->diffForHumans()}}</p> <hr>
+                        <h4 class="card-title">最后活跃于</h4>
+                        <p class="card-text">{{$user->last_actived_at->diffForHumans()}}</p>
                     </div>
                 </div>
             </div>

@@ -62,14 +62,8 @@ class UsersController extends Controller
 
     public function test(User $user)
     {
-        $hash_prefix = 'larabbs_last_actived_at_';
-        $hash = $hash_prefix.Carbon::now()->toDateString();
-        $key='user_3';
-
-        $value=Carbon::now()->toDateTimeString();
-        Cache::tags('xiang')->put($key, $value,100);
-
-       dd( Cache::tags('xiang')->getStore());
+      $date = Carbon::now()->toDateString();
+      dd( new Carbon($date));
 
 
     }

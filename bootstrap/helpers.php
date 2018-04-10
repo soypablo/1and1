@@ -2,7 +2,7 @@
 
 function route_name()
 {
-    return str_replace('.', '-', \Illuminate\Support\Facades\Route::currentRouteName());
+   return str_replace('.', '-', \Illuminate\Support\Facades\Route::currentRouteName());
 }
 
 function make_excerpt($value, $length = 200)

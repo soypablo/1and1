@@ -13,25 +13,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item "><a href="{{ route('pages.home') }}"
+                <li class="nav-item "><a href="{{ route('pages.root') }}"
                                          class="nav-link nav-link-1 {{active_class(if_route('topics.index'))}}">首页</a>
                 </li>
-
-
-                    <li class="nav-item "><a href="{{ route('topics.index') }}"
-                                             class="nav-link {{active_class(if_route('topics.index'))}}">话题</a></li>
-                    <li class="nav-item "><a href="{{ route('categories.show', 1) }}"
-                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',1))}}">分享</a>
-                    </li>
-                    <li class="nav-item "><a href="{{ route('categories.show', 2) }}"
-                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',2))}}">教程</a>
-                    </li>
-                    <li class="nav-item "><a href="{{ route('categories.show', 3) }}"
-                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',3))}}">问答</a>
-                    </li>
-                    <li class="nav-item "><a href="{{ route('categories.show', 4) }}"
-                                             class="nav-link {{active_class(if_route('categories.show') && if_route_param('category',4))}}">公告</a>
-                    </li>
+                <li class="nav-item "><a href="#"
+                                         class="nav-link {{active_class(if_route('topics.index'))}}">产品案例</a></li>
+                <li class="nav-item "><a href="#"
+                                         class="nav-link {{active_class(if_route('topics.index'))}}">技术人员</a></li>
+                <li class="nav-item "><a href="#"
+                                         class="nav-link {{active_class(if_route('topics.index'))}}">发布需求</a></li>
+                <li class="nav-item "><a href="{{route('pages.home')}}"
+                                         class="nav-link {{active_class(if_route('topics.index'))}}">交易大厅</a></li>
 
             </ul>
             <ul class="navbar-nav ml-auto">

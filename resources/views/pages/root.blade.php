@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_home')
 @section('title','首页')
 
 @section('content')
