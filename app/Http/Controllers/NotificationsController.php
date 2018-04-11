@@ -26,6 +26,7 @@ class NotificationsController extends Controller
 
     public function destroy()
     {
+
         DB::table('notifications')->where('notifiable_id',Auth::id())->delete();
         return back();
     }

@@ -62,8 +62,16 @@ class UsersController extends Controller
 
     public function test(User $user)
     {
-      $date = Carbon::now()->toDateString();
-      dd( new Carbon($date));
+
+        $hash_prefix  = 'larabbs_last_actived_at_';
+
+        $date         = Carbon::now()->toDateString();
+
+
+        $hash = $hash_prefix.$date;
+
+        dd(Redis::hGetAll($hash));
+
 
 
     }
