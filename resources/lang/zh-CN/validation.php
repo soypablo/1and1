@@ -148,5 +148,7 @@ return [
         'avatar'=>'用户头像',
         'body'=>'内容',
         'category_id'=>'分类id号',
+        'verification_key'=>'验证key',
+        'verification_code'=>'验证code',
     ],
 ];

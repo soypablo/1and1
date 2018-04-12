@@ -31,6 +31,8 @@ class UsersController extends Controller
         $this->middleware('auth', ['expect' => ['show']]);
     }
 
+
+
     //显示 用户 页面
     public function show(User $user)
     {
@@ -60,17 +62,18 @@ class UsersController extends Controller
         return redirect()->route('users.show', [$user])->with('success', '资料已经修改成功了~~');
     }
 
-    public function test(User $user)
+    public function test()
     {
 
-        $hash_prefix  = 'larabbs_last_actived_at_';
+        $key       = str_random(15);
+        $expiredAt = now()->addMinutes(10);
+        // 缓存验证码 10分钟过期。
+        \Cache::put($key, [
+            'phone' => '13857051521',
+            'code'  => '1234',
+        ], $expiredAt);
 
-        $date         = Carbon::now()->toDateString();
-
-
-        $hash = $hash_prefix.$date;
-
-        dd(Redis::hGetAll($hash));
+       return $key;
 
 
 
