@@ -17,8 +17,9 @@ use function strlen;
 use function strtolower;
 use function time;
 use function trim;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use Traits\ActiveUser;
     use Traits\LastActivedAtHelper;
@@ -42,11 +43,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'introduction',
-        'avatar',
+        'name', 'phone', 'email', 'password', 'introduction', 'avatar',
+        'weixin_openid', 'weixin_unionid'
     ];
 
     /**
@@ -109,9 +107,16 @@ class User extends Authenticatable
 
     public function setAvatarAttribute($value)
     {
-        if(! starts_with($value, 'avatar/')){
-            $value = 'avatar/'.$value;
-        }
-        $this->attributes['avatar'] = $value;
+
+    }
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }

@@ -150,5 +150,7 @@ return [
         'category_id'=>'分类id号',
         'verification_key'=>'验证key',
         'verification_code'=>'验证code',
+        'captcha_key'=>'图片验证码key',
+        'captcha_code'=>'图片验证码',
     ],
 ];

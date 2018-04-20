@@ -28,11 +28,13 @@ class UsersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['expect' => ['show']]);
+        $this->middleware('auth', [
+            'expect' => [
+                'show',
+                'test',
+            ],
+        ]);
     }
-
-
-
     //显示 用户 页面
     public function show(User $user)
     {
@@ -64,19 +66,7 @@ class UsersController extends Controller
 
     public function test()
     {
-
-        $key       = str_random(15);
-        $expiredAt = now()->addMinutes(10);
-        // 缓存验证码 10分钟过期。
-        \Cache::put($key, [
-            'phone' => '13857051521',
-            'code'  => '1234',
-        ], $expiredAt);
-
-       return $key;
-
-
-
+        return view('pages.test');
     }
 
 }

@@ -3,12 +3,14 @@
 namespace App\Http\Requests\Api;
 
 
+
 use Dingo\Api\Http\FormRequest;
 
-class VerificationCodeRequest extends FormRequest
+class SocialAuthorizationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
+     *
      * @return bool
      */
     public function authorize()
@@ -18,13 +20,20 @@ class VerificationCodeRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
+     *
      * @return array
      */
     public function rules()
     {
-        return [
-            'captcha_key'  => 'required|string',
-            'captcha_code' => 'required|string',
+        $rules = [
+            'code' => 'required_without:access_token|string',
+            'access_token' => 'required_without:code|string',
         ];
+
+        if ($this->social_type == 'weixin' && !$this->code) {
+            $rules['openid']  = 'required|string';
+        }
+
+        return $rules;
     }
 }

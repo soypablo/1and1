@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eeaf3590959b37ccb2352788e00ac29b",
+    "content-hash": "588df02afc059eefdef94485836385bb",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -507,16 +507,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.3",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "1bec00a10039b823cc94eef4eddd47dcd3b2ca04"
+                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/egulias/EmailValidator/1bec00a10039b823cc94eef4eddd47dcd3b2ca04.zip",
-                "reference": "1bec00a10039b823cc94eef4eddd47dcd3b2ca04",
+                "url": "https://files.phpcomposer.com/files/egulias/EmailValidator/8790f594151ca6a2010c6218e09d96df67173ad3.zip",
+                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3",
                 "shasum": ""
             },
             "require": {
@@ -525,7 +525,7 @@
             },
             "require-dev": {
                 "dominicsayers/isemail": "dev-master",
-                "phpunit/phpunit": "^4.8.35",
+                "phpunit/phpunit": "^4.8.35||^5.7||^6.0",
                 "satooshi/php-coveralls": "^1.0.1"
             },
             "suggest": {
@@ -560,7 +560,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2017-11-15T23:40:40+00:00"
+            "time": "2018-04-10T10:11:19+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -711,6 +711,59 @@
                 "trusted proxy"
             ],
             "time": "2017-06-15T17:19:42+00:00"
+        },
+        {
+            "name": "gregwar/captcha",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Captcha.git",
+                "reference": "1d06ac8e12d2b3e0df39586d78b9f50e086a0bea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/Gregwar/Captcha/1d06ac8e12d2b3e0df39586d78b9f50e086a0bea.zip",
+                "reference": "1d06ac8e12d2b3e0df39586d78b9f50e086a0bea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.0",
+                "symfony/finder": "~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "captcha",
+            "autoload": {
+                "psr-4": {
+                    "Gregwar\\": "src/Gregwar"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                },
+                {
+                    "name": "Jeremy Livingston",
+                    "email": "jeremy.j.livingston@gmail.com"
+                }
+            ],
+            "description": "Captcha generator",
+            "homepage": "https://github.com/Gregwar/Captcha",
+            "keywords": [
+                "bot",
+                "captcha",
+                "spam"
+            ],
+            "time": "2017-12-30T16:18:44+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1316,6 +1369,68 @@
             "time": "2018-03-13T18:00:18+00:00"
         },
         {
+            "name": "laravel/socialite",
+            "version": "v3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/socialite.git",
+                "reference": "fc1c8d415699e502f3e61cbc61e3250d5bd942eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/laravel/socialite/fc1c8d415699e502f3e61cbc61e3250d5bd942eb.zip",
+                "reference": "fc1c8d415699e502f3e61cbc61e3250d5bd942eb",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "illuminate/contracts": "~5.4",
+                "illuminate/http": "~5.4",
+                "illuminate/support": "~5.4",
+                "league/oauth1-client": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0|~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Socialite\\SocialiteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Socialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+            "keywords": [
+                "laravel",
+                "oauth"
+            ],
+            "time": "2017-11-06T16:02:48+00:00"
+        },
+        {
             "name": "laravel/tinker",
             "version": "v1.0.5",
             "source": {
@@ -1571,6 +1686,69 @@
                 "rest"
             ],
             "time": "2017-06-12T11:04:56+00:00"
+        },
+        {
+            "name": "league/oauth1-client",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth1-client.git",
+                "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/thephpleague/oauth1-client/fca5f160650cb74d23fc11aa570dd61f86dcf647.zip",
+                "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9",
+                "phpunit/phpunit": "^4.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth1\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Corlett",
+                    "email": "bencorlett@me.com",
+                    "homepage": "http://www.webcomm.com.au",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth 1.0 Client Library",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "bitbucket",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth1",
+                "single sign on",
+                "trello",
+                "tumblr",
+                "twitter"
+            ],
+            "time": "2016-08-17T00:36:58+00:00"
         },
         {
             "name": "mews/captcha",
@@ -1837,6 +2015,69 @@
             "time": "2017-01-23T04:29:33+00:00"
         },
         {
+            "name": "namshi/jose",
+            "version": "7.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/namshi/jose.git",
+                "reference": "89a24d7eb3040e285dd5925fcad992378b82bcff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/namshi/jose/89a24d7eb3040e285dd5925fcad992378b82bcff.zip",
+                "reference": "89a24d7eb3040e285dd5925fcad992378b82bcff",
+                "shasum": ""
+            },
+            "require": {
+                "ext-date": "*",
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-spl": "*",
+                "php": ">=5.5",
+                "symfony/polyfill-php56": "^1.0"
+            },
+            "require-dev": {
+                "phpseclib/phpseclib": "^2.0",
+                "phpunit/phpunit": "^4.5|^5.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "suggest": {
+                "ext-openssl": "Allows to use OpenSSL as crypto engine.",
+                "phpseclib/phpseclib": "Allows to use Phpseclib as crypto engine, use version ^2.0."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Namshi\\JOSE\\": "src/Namshi/JOSE/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Nadalin",
+                    "email": "alessandro.nadalin@gmail.com"
+                },
+                {
+                    "name": "Alessandro Cinelli (cirpo)",
+                    "email": "alessandro.cinelli@gmail.com"
+                }
+            ],
+            "description": "JSON Object Signing and Encryption library for PHP.",
+            "keywords": [
+                "JSON Web Signature",
+                "JSON Web Token",
+                "JWS",
+                "json",
+                "jwt",
+                "token"
+            ],
+            "time": "2016-12-05T07:27:31+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.25.0",
             "source": {
@@ -1942,16 +2183,16 @@
         },
         {
             "name": "overtrue/easy-sms",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/easy-sms.git",
-                "reference": "cfa8a122a44d2a9c2ae5e7608f80b9eca2fd1496"
+                "reference": "a6f9921246e7f58c39f296af27627815f9539c29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/overtrue/easy-sms/cfa8a122a44d2a9c2ae5e7608f80b9eca2fd1496.zip",
-                "reference": "cfa8a122a44d2a9c2ae5e7608f80b9eca2fd1496",
+                "url": "https://files.phpcomposer.com/files/overtrue/easy-sms/a6f9921246e7f58c39f296af27627815f9539c29.zip",
+                "reference": "a6f9921246e7f58c39f296af27627815f9539c29",
                 "shasum": ""
             },
             "require": {
@@ -1979,7 +2220,7 @@
                 }
             ],
             "description": "The easiest way to send short message.",
-            "time": "2018-01-27T02:48:21+00:00"
+            "time": "2018-04-13T14:09:53+00:00"
         },
         {
             "name": "overtrue/laravel-lang",
@@ -2668,17 +2909,107 @@
             "time": "2018-01-20T00:28:24+00:00"
         },
         {
-            "name": "spatie/laravel-permission",
-            "version": "2.9.2",
+            "name": "socialiteproviders/manager",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "9fdf2e850ff27b1ee9705c5f562d2411a7b5ce43"
+                "url": "https://github.com/SocialiteProviders/Manager.git",
+                "reference": "1de3f3d874392da6f1a4c0bf30d843e9cd903ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/spatie/laravel-permission/9fdf2e850ff27b1ee9705c5f562d2411a7b5ce43.zip",
-                "reference": "9fdf2e850ff27b1ee9705c5f562d2411a7b5ce43",
+                "url": "https://files.phpcomposer.com/files/SocialiteProviders/Manager/1de3f3d874392da6f1a4c0bf30d843e9cd903ea7.zip",
+                "reference": "1de3f3d874392da6f1a4c0bf30d843e9cd903ea7",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/socialite": "~3.0",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SocialiteProviders\\Manager\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Manager\\": "src/",
+                    "SocialiteProviders\\Manager\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Wendt",
+                    "email": "andy@awendt.com"
+                }
+            ],
+            "description": "Easily add new or override built-in providers in Laravel Socialite.",
+            "time": "2017-11-20T08:42:57+00:00"
+        },
+        {
+            "name": "socialiteproviders/weixin",
+            "version": "v4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Weixin.git",
+                "reference": "8406e487b951650125244d2334acf4e18997d179"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/SocialiteProviders/Weixin/8406e487b951650125244d2334acf4e18997d179.zip",
+                "reference": "8406e487b951650125244d2334acf4e18997d179",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "socialiteproviders/manager": "~2.0 || ~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Weixin\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xyxu",
+                    "email": "techxu@gmail.com"
+                },
+                {
+                    "name": "xiami",
+                    "email": "jhdxr@php.net"
+                }
+            ],
+            "description": "Weixin OAuth2 Provider for Laravel Socialite",
+            "time": "2017-11-18T05:09:07+00:00"
+        },
+        {
+            "name": "spatie/laravel-permission",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "66ec9df43019b425dafe2b5429e80501149dd0c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/spatie/laravel-permission/66ec9df43019b425dafe2b5429e80501149dd0c7.zip",
+                "reference": "66ec9df43019b425dafe2b5429e80501149dd0c7",
                 "shasum": ""
             },
             "require": {
@@ -2729,7 +3060,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-03-12T16:15:16+00:00"
+            "time": "2018-04-16T03:10:59+00:00"
         },
         {
             "name": "summerblue/administrator",
@@ -3339,6 +3670,62 @@
             "time": "2018-01-30T19:27:44+00:00"
         },
         {
+            "name": "symfony/polyfill-php56",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php56.git",
+                "reference": "ebc999ce5f14204c5150b9bd15f8f04e621409d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/polyfill-php56/ebc999ce5f14204c5150b9bd15f8f04e621409d8.zip",
+                "reference": "ebc999ce5f14204c5150b9bd15f8f04e621409d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/polyfill-util": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php56\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 5.6+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-01-30T19:27:44+00:00"
+        },
+        {
             "name": "symfony/polyfill-php70",
             "version": "v1.7.0",
             "source": {
@@ -3396,6 +3783,58 @@
                 "shim"
             ],
             "time": "2018-01-30T19:27:44+00:00"
+        },
+        {
+            "name": "symfony/polyfill-util",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-util.git",
+                "reference": "e17c808ec4228026d4f5a8832afa19be85979563"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/polyfill-util/e17c808ec4228026d4f5a8832afa19be85979563.zip",
+                "reference": "e17c808ec4228026d4f5a8832afa19be85979563",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Util\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony utilities for portability of PHP codes",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compat",
+                "compatibility",
+                "polyfill",
+                "shim"
+            ],
+            "time": "2018-01-31T18:08:44+00:00"
         },
         {
             "name": "symfony/process",
@@ -3709,26 +4148,54 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
-            "name": "viacreative/sudo-su",
-            "version": "1.1.0",
+            "name": "tymon/jwt-auth",
+            "version": "1.0.0-rc.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/viacreative/sudo-su.git",
-                "reference": "78905d0db3721a5daece6f7fcd6c6567fd00bb46"
+                "url": "https://github.com/tymondesigns/jwt-auth.git",
+                "reference": "6adc5c9df836405c47abc2f4c836872effb71ead"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/viacreative/sudo-su/78905d0db3721a5daece6f7fcd6c6567fd00bb46.zip",
-                "reference": "78905d0db3721a5daece6f7fcd6c6567fd00bb46",
+                "url": "https://files.phpcomposer.com/files/tymondesigns/jwt-auth/6adc5c9df836405c47abc2f4c836872effb71ead.zip",
+                "reference": "6adc5c9df836405c47abc2f4c836872effb71ead",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "illuminate/auth": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "illuminate/contracts": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "illuminate/http": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "namshi/jose": "^7.0",
+                "nesbot/carbon": "^1.0",
+                "php": "^5.5.9 || ^7.0"
+            },
+            "require-dev": {
+                "cartalyst/sentinel": "2.0.*",
+                "illuminate/console": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "illuminate/database": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "illuminate/routing": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.8 || ~6.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "1.0-dev"
+                },
+                "laravel": {
+                    "aliases": {
+                        "JWTAuth": "Tymon\\JWTAuth\\Facades\\JWTAuth",
+                        "JWTFactory": "Tymon\\JWTAuth\\Facades\\JWTFactory"
+                    },
+                    "providers": [
+                        "Tymon\\JWTAuth\\Providers\\LaravelServiceProvider"
+                    ]
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "VIACreative\\SudoSu\\": "src/"
+                    "Tymon\\JWTAuth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3737,16 +4204,22 @@
             ],
             "authors": [
                 {
-                    "name": "Terry Harvey",
-                    "email": "contact@terryharvey.co.uk"
+                    "name": "Sean Tymon",
+                    "email": "tymon148@gmail.com",
+                    "homepage": "https://tymon.xyz",
+                    "role": "Developer"
                 }
             ],
-            "description": "A utility package for logging in as other users",
+            "description": "JSON Web Token Authentication for Laravel and Lumen",
+            "homepage": "https://github.com/tymondesigns/jwt-auth",
             "keywords": [
-                "debugging",
+                "Authentication",
+                "JSON Web Token",
+                "auth",
+                "jwt",
                 "laravel"
             ],
-            "time": "2017-03-23T16:28:08+00:00"
+            "time": "2017-08-30T17:57:47+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4840,16 +5313,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.5.7",
+            "version": "6.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6bd77b57707c236833d2b57b968e403df060c9d9"
+                "reference": "4f21a3c6b97c42952fd5c2837bb354ec0199b97b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/6bd77b57707c236833d2b57b968e403df060c9d9.zip",
-                "reference": "6bd77b57707c236833d2b57b968e403df060c9d9",
+                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/4f21a3c6b97c42952fd5c2837bb354ec0199b97b.zip",
+                "reference": "4f21a3c6b97c42952fd5c2837bb354ec0199b97b",
                 "shasum": ""
             },
             "require": {
@@ -4920,7 +5393,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-02-26T07:01:09+00:00"
+            "time": "2018-04-10T11:38:34+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5735,12 +6208,53 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2017-04-07T12:08:54+00:00"
+        },
+        {
+            "name": "viacreative/sudo-su",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/viacreative/sudo-su.git",
+                "reference": "78905d0db3721a5daece6f7fcd6c6567fd00bb46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/viacreative/sudo-su/78905d0db3721a5daece6f7fcd6c6567fd00bb46.zip",
+                "reference": "78905d0db3721a5daece6f7fcd6c6567fd00bb46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VIACreative\\SudoSu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Terry Harvey",
+                    "email": "contact@terryharvey.co.uk"
+                }
+            ],
+            "description": "A utility package for logging in as other users",
+            "keywords": [
+                "debugging",
+                "laravel"
+            ],
+            "time": "2017-03-23T16:28:08+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dingo/api": 15
+        "dingo/api": 15,
+        "tymon/jwt-auth": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,

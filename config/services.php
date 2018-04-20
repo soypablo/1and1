@@ -34,5 +34,10 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'weixin' => [
+        'client_id' => env('WEIXIN_APP_ID'),
+        'client_secret' => env('WEIXIN_APP_SECRET'),
+        'redirect' => env('WEIXIN_REDIRECT_URI'),
+    ],
 
 ];
